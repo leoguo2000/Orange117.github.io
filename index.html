@@ -62,14 +62,6 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
@@ -176,54 +168,9 @@
 <li><code>mkdir blog</code> <em>创建blog目录</em> （在自己选择的磁盘位置下）</li>
 </ul>
 <hr>
-<h2 id="二-hexo"><a href="#二-hexo" class="headerlink" title="二. hexo"></a>二. hexo</h2><p>1.建站<br>安装完hexo后，在blog文件夹下执行命令: </p>
-<ul>
-<li><code>hexo init</code>     <em>生成博客 初始化博客</em></li>
-<li><code>hexo s</code>        <em>启动本地博客服务</em></li>
-</ul>
-<p>2.配置 </p>
-<ul>
-<li><code>hexo new &quot;我的第一篇博客&quot;</code> <em>生成博客文章《我的第一篇博客》</em> <strong>我的第一篇博客.md</strong> </li>
-<li><code>hexo g</code>     <em>generate 生成</em>一下</li>
-<li><code>hexo s</code> 启动服务器。默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a> 这时可以打开浏览器登录localhost:4000 查看博客页面。 </li>
-</ul>
-<hr>
-<h2 id="三-配置"><a href="#三-配置" class="headerlink" title="三. 配置"></a>三. 配置</h2><p>1.在GitHub上创建仓库：<strong>YourGitHubName.github.io</strong></p>
-<p>​    <strong><em>注意：是你的GitHub的名字</em></strong></p>
-<p>2.<code>cnpm install --save hexo-deployer-git</code> <em>在blog目录下安装git部署插件</em> </p>
-<p>3.修改<strong>_config.yml</strong>文件：</p>
-<ul>
-<li>配置_config.yml </li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/YourGitHubName/YourGitHubName.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p>4.命令行操作：</p>
-<ul>
-<li><p><code>hexo clean</code>    <em>清理一下</em></p>
-</li>
-<li><p><code>hexo</code>      <em>部署到Github仓库里</em>       <a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>  访问这个地址可以查看博客</p>
-</li>
-</ul>
-<p>5.主题美化：</p>
-<ul>
-<li><p><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code>    <em>下载 <strong>yilia</strong>主题到本地</em></p>
-</li>
-<li><p>修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
-</li>
-<li><p><code>hexo clean</code>    <em>清理一下</em></p>
-</li>
-<li><p><code>hexo g</code>    <em>生成</em></p>
-</li>
-<li><p><code>hexo d</code>    <em>部署到远程Github仓库</em> </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>  <em>查看博客</em></p>
-</li>
-</ul>
-<hr>
-<p>在搭建的过程中遇到任何问题，可以在搜索引擎上查找相应的解决方案。如果出现任何意外情况，都可以删掉<strong>blog</strong>文件夹重来。</p>
-<p><strong>具体可参考：</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a> </p>
-
+        
+          <a class="article-more-a" href="/2020/09/06/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#more">more >></a>
+        
       
 
       
@@ -306,7 +253,7 @@
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
-		innerArchive: true,
+		innerArchive: false,
 		showTags: false
 	}
 </script>
@@ -326,133 +273,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
   </div>
   <div class="tools-wrap">
     
-    	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
-          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
-          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
-        </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-            
-            <div class="clearfix"></div>
-          </ul>
-        </div>
-        <ul class="search-ul">
-          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
-            3、在根目录_config.yml里添加配置：
-<pre style="font-size: 12px;" q-show="jsonFail">
-  jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: false
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
-</pre>
-          </p>
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">一路向北，最爱天然。</div>
   	  	
     	</section>
     
