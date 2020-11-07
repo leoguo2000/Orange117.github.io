@@ -15,23 +15,22 @@
 <meta property="og:site_name" content="Orange117">
 <meta property="og:description" content="Redis 学习NoSql的思想、Redis的基础命令以及和Java的连接。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/Redis%E5%9F%BA%E7%A1%80%5C1.%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83.bmp">
+<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/1.%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83.bmp">
 <meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106113405910.png">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106113424318.png">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106171346559.png">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106171750638.png">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106172858393.png">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106173510568.png">
-<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106174213475.png">
+<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106113424318.png">
+<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106171750638.png">
+<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106172858393.png">
+<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106173510568.png">
+<meta property="og:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106174213475.png">
 <meta property="article:published_time" content="2020-11-07T07:54:58.000Z">
-<meta property="article:modified_time" content="2020-11-07T08:22:54.076Z">
+<meta property="article:modified_time" content="2020-11-07T08:34:23.976Z">
 <meta property="article:author" content="Orange117">
 <meta property="article:tag" content="Redis">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="NoSql">
 <meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/Redis%E5%9F%BA%E7%A1%80%5C1.%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83.bmp">
+<meta name="twitter:image" content="https://orange117.github.io/2020/11/07/Redis%E5%9F%BA%E7%A1%80/1.%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83.bmp">
   
     <link rel="alternative" href="/atom.xml" title="Orange117" type="application/atom+xml">
   
@@ -182,7 +181,7 @@
       <div id="toc-article" class="toc-article">
           <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
           <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-number">1.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">一、基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E4%BB%80%E4%B9%88%E6%98%AFNoSql"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1什么是NoSql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2下载安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3命令操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B-string"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1.3.1字符串类型 string</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2%E5%93%88%E5%B8%8C%E7%B1%BB%E5%9E%8B-hash"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">1.3.2哈希类型 hash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-3%E5%88%97%E8%A1%A8%E7%B1%BB%E5%9E%8B-list"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">1.3.3列表类型 list</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-4%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B-set"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">1.3.4集合类型 set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-5%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B-sorted-set"><span class="toc-number">1.1.3.5.</span> <span class="toc-text">1.3.5有序集合类型 sorted set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-6%E9%80%9A%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.1.3.6.</span> <span class="toc-text">1.3.6通用命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%89%B9%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">二、特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">2.1.1持久化机制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RDB%EF%BC%9A%E9%BB%98%E8%AE%A4%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.1.1.1.</span> <span class="toc-text">RDB：默认方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AOF%EF%BC%9A%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95"><span class="toc-number">1.2.1.1.2.</span> <span class="toc-text">AOF：日志记录</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">1.3.</span> <span class="toc-text">三、Java客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Jedis"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">3.1 Jedis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Jedis-%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">3.2 Jedis 连接池</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-1-JedisPool-%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">1.3.0.2.1.</span> <span class="toc-text">3.2.1 JedisPool 工具类</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-number">1.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">一、基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E4%BB%80%E4%B9%88%E6%98%AFNoSql"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1什么是NoSql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2下载安装</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#AOF%EF%BC%9A%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95"><span class="toc-number">1.1.2.0.1.</span> <span class="toc-text">AOF：日志记录</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">1.2.</span> <span class="toc-text">三、Java客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Jedis"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">3.1 Jedis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Jedis-%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-number">1.2.0.2.</span> <span class="toc-text">3.2 Jedis 连接池</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-1-JedisPool-%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">1.2.0.2.1.</span> <span class="toc-text">3.2.1 JedisPool 工具类</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
      </div>
      <script type="text/javascript">
       function showToc(){
@@ -213,7 +212,8 @@
 <ul>
 <li><p><strong>NoSql</strong>和<strong>关系型数据库</strong>比较</p>
 <p><u><strong><em>缓存思想</em></strong></u></p>
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/Redis%E5%9F%BA%E7%A1%80%5C1.%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83.bmp" alt="1.关系型和非关系型数据库比较"></p>
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/1.%E5%85%B3%E7%B3%BB%E5%9E%8B%E5%92%8C%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83.bmp" class>
+
 </li>
 </ul>
 <h3 id="1-2下载安装"><a href="#1-2下载安装" class="headerlink" title="1.2下载安装"></a>1.2下载安装</h3><ul>
@@ -230,131 +230,13 @@
 <p>双击对应的文件</p>
 </li>
 </ul>
-<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106113405910.png" class title="test">
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106113405910.png" class>
 
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106113424318.png" alt="image-20201106113424318"></p>
-<h3 id="1-3命令操作"><a href="#1-3命令操作" class="headerlink" title="1.3命令操作"></a>1.3命令操作</h3><ul>
-<li><p>存储结构：</p>
-<p>key - value，其中key是字符串，value有5种不同的数据结构</p>
-<ul>
-<li>String: 字符串</li>
-<li>Hash: 散列</li>
-<li>List: 列表</li>
-<li>Set: 集合</li>
-<li>Sorted Set: 有序集合</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-3-1字符串类型-string"><a href="#1-3-1字符串类型-string" class="headerlink" title="1.3.1字符串类型 string"></a>1.3.1字符串类型 string</h4><ul>
-<li>存储: set key value</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set username ckx</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set age 10</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106113424318.png" class title="%) ### 1.3命令操作 - 存储结构： key - value，其中key是字符串，value有5种不同的数据结构 - String: 字符串 - Hash: 散列 - List: 列表 - Set: 集合 - Sorted Set: 有序集合 #### 1.3.1字符串类型 string - 存储: set key value <figure class=" highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set username ckx</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set age 10</span><br><span class="line">OK</span><br></pre></td></tr></table> - 获取: get key <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; get username</span><br><span class="line">&quot;ckx&quot;</span><br></pre></td></tr></table></figure> - 删除: del key <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; del age</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; del c</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure> #### 1.3.2哈希类型 hash - 存储: hset key field value <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset myhash username ckx</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hset myhash password 123</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure> - 获取： - hget key field: 获取指定的 field 对应的值 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hget myhash username</span><br><span class="line">&quot;ckx&quot;</span><br></pre></td></tr></table></figure> - hgetall key: 获取所有的field对应的值 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hgetall myhash</span><br><span class="line">1) &quot;username&quot;</span><br><span class="line">2) &quot;ckx&quot;</span><br><span class="line">3) &quot;password&quot;</span><br><span class="line">4) &quot;123&quot;</span><br></pre></td></tr></table></figure> - 删除: hdel key field <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hdel myhash username</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hgetall myhash</span><br><span class="line">1) &quot;password&quot;</span><br><span class="line">2) &quot;123&quot;</span><br></pre></td></tr></table></figure> #### 1.3.3列表类型 list 可以添加一个元素到列表的头部或者尾部 - 添加： - lpush key value: 将元素加入列表左表 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush myList a</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; lpush myList b</span><br><span class="line">(integer) 2</span><br><span class="line">127.0.0.1:6379&gt; lpush myList c</span><br><span class="line">(integer) 3</span><br></pre></td></tr></table></figure> - rpush key value: 将元素加入列表右边 - 获取：lrange key start end ：范围获取 - Redis Lrange 返回列表中指定区间内的元素，区间以偏移量 START 和 END 指定。 其中 0 表示列表的第一个元素， 1 表示列表的第二个元素，以此类推。 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lrange myList 0 -1</span><br><span class="line">1) &quot;c&quot;</span><br><span class="line">2) &quot;b&quot;</span><br><span class="line">3) &quot;a&quot;</span><br></pre></td></tr></table></figure> - 删除： - lpop key： 删除列表最左边的元素，并将元素返回 - rpop key： 删除列表最右边的元素，并将元素返回 #### 1.3.4集合类型 set 不允许重复元素 - 存储：sadd key value <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd myset a</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sadd myset a</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure> - 获取：smembers key:获取set集合中所有元素 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; smembers myset</span><br><span class="line">1) &quot;a&quot;</span><br></pre></td></tr></table></figure> - 删除：srem key value:删除set集合中的某个元素 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; srem myset a</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure> #### 1.3.5有序集合类型 sorted set - Redis 有序集合和集合一样也是 string 类型元素的集合,且不允许重复的成员。 不同的是每个元素都会关联一个 double 类型的分数。redis 正是通过分数来为集合中的成员进行从小到大的排序。 有序集合的成员是唯一的,但分数(score)却可以重复。 - 存储：zadd key score value <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd mysort 60 ckx1</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd mysort 50 ckx2</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd mysort 80 ckx3</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure> - 获取：zrange key start end [withscores] <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zrange mysort 0 -1</span><br><span class="line">1) &quot;ckx2&quot;</span><br><span class="line">2) &quot;ckx1&quot;</span><br><span class="line">3) &quot;ckx3&quot;</span><br><span class="line">127.0.0.1:6379&gt; zrange mysort 0 -1 withscores</span><br><span class="line">1) &quot;ckx2&quot;</span><br><span class="line">2) &quot;50&quot;</span><br><span class="line">3) &quot;ckx1&quot;</span><br><span class="line">4) &quot;60&quot;</span><br><span class="line">5) &quot;ckx3&quot;</span><br><span class="line">6) &quot;80&quot;</span><br></pre></td></tr></table></figure> - 删除：zrem key value <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zrem mysort ckx1</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure> #### 1.3.6通用命令 - keys * : 查询所有的键 - type key ： 获取键对应的value的类型 - del key：删除指定的key value --- ## 二、特性 ### 2.1持久化 - redis是一个内存数据库，当redis服务器重启，获取电脑重启，数据会丢失，我们可以将redis内存中的数据持久化保存到硬盘的文件中。 #### 2.1.1持久化机制 ##### RDB：默认方式 1. 编辑 redis.windows.conf 文件 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#   after 900 sec (15 min) if at least 1 key changed</span><br><span class="line">save 900 1</span><br><span class="line">#   after 300 sec (5 min) if at least 10 keys changed</span><br><span class="line">save 300 10</span><br><span class="line">#   after 60 sec if at least 10000 keys changed</span><br><span class="line">save 60 10000</span><br></pre></td></tr></table></figure> **15 分钟之后，如果有一个 key 改变，持久化一次** 2. 在redis文件夹下选择命令行启动**服务端** {% asset_img image-20201106171346559.png">
 
-<ul>
-<li>获取: get key</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; get username</span><br><span class="line">&quot;ckx&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除: del key</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; del age</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; del c</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-3-2哈希类型-hash"><a href="#1-3-2哈希类型-hash" class="headerlink" title="1.3.2哈希类型 hash"></a>1.3.2哈希类型 hash</h4><ul>
-<li>存储: hset key field value</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset myhash username ckx</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hset myhash password 123</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>获取：</p>
-<ul>
-<li>hget key field: 获取指定的 field 对应的值</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hget myhash username</span><br><span class="line">&quot;ckx&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>hgetall key: 获取所有的field对应的值</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hgetall myhash</span><br><span class="line">1) &quot;username&quot;</span><br><span class="line">2) &quot;ckx&quot;</span><br><span class="line">3) &quot;password&quot;</span><br><span class="line">4) &quot;123&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除: hdel key field</p>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hdel myhash username</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hgetall myhash</span><br><span class="line">1) &quot;password&quot;</span><br><span class="line">2) &quot;123&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-3-3列表类型-list"><a href="#1-3-3列表类型-list" class="headerlink" title="1.3.3列表类型 list"></a>1.3.3列表类型 list</h4><p>可以添加一个元素到列表的头部或者尾部</p>
-<ul>
-<li><p>添加：</p>
-<ul>
-<li><p>lpush key value: 将元素加入列表左表</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush myList a</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; lpush myList b</span><br><span class="line">(integer) 2</span><br><span class="line">127.0.0.1:6379&gt; lpush myList c</span><br><span class="line">(integer) 3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>rpush key value: 将元素加入列表右边</p>
-</li>
-</ul>
-</li>
-<li><p>获取：lrange key start end ：范围获取</p>
-<ul>
-<li>Redis Lrange 返回列表中指定区间内的元素，区间以偏移量 START 和 END 指定。 其中 0 表示列表的第一个元素， 1 表示列表的第二个元素，以此类推。 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lrange myList 0 -1</span><br><span class="line">1) &quot;c&quot;</span><br><span class="line">2) &quot;b&quot;</span><br><span class="line">3) &quot;a&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除：</p>
-<ul>
-<li>lpop key： 删除列表最左边的元素，并将元素返回</li>
-<li>rpop key： 删除列表最右边的元素，并将元素返回</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-3-4集合类型-set"><a href="#1-3-4集合类型-set" class="headerlink" title="1.3.4集合类型 set"></a>1.3.4集合类型 set</h4><p>不允许重复元素</p>
-<ul>
-<li><p>存储：sadd key value</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd myset a</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sadd myset a</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取：smembers key:获取set集合中所有元素</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; smembers myset</span><br><span class="line">1) &quot;a&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除：srem key value:删除set集合中的某个元素</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; srem myset a</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="1-3-5有序集合类型-sorted-set"><a href="#1-3-5有序集合类型-sorted-set" class="headerlink" title="1.3.5有序集合类型 sorted set"></a>1.3.5有序集合类型 sorted set</h4><ul>
-<li><p>Redis 有序集合和集合一样也是 string 类型元素的集合,且不允许重复的成员。</p>
-<p>不同的是每个元素都会关联一个 double 类型的分数。redis 正是通过分数来为集合中的成员进行从小到大的排序。</p>
-<p>有序集合的成员是唯一的,但分数(score)却可以重复。</p>
-</li>
-<li><p>存储：zadd key score value</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd mysort 60 ckx1</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd mysort 50 ckx2</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd mysort 80 ckx3</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取：zrange key start end [withscores]</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zrange mysort 0 -1</span><br><span class="line">1) &quot;ckx2&quot;</span><br><span class="line">2) &quot;ckx1&quot;</span><br><span class="line">3) &quot;ckx3&quot;</span><br><span class="line">127.0.0.1:6379&gt; zrange mysort 0 -1 withscores</span><br><span class="line">1) &quot;ckx2&quot;</span><br><span class="line">2) &quot;50&quot;</span><br><span class="line">3) &quot;ckx1&quot;</span><br><span class="line">4) &quot;60&quot;</span><br><span class="line">5) &quot;ckx3&quot;</span><br><span class="line">6) &quot;80&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除：zrem key value</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zrem mysort ckx1</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="1-3-6通用命令"><a href="#1-3-6通用命令" class="headerlink" title="1.3.6通用命令"></a>1.3.6通用命令</h4><ul>
-<li>keys * : 查询所有的键</li>
-<li>type key ： 获取键对应的value的类型</li>
-<li>del key：删除指定的key value</li>
-</ul>
-<hr>
-<h2 id="二、特性"><a href="#二、特性" class="headerlink" title="二、特性"></a>二、特性</h2><h3 id="2-1持久化"><a href="#2-1持久化" class="headerlink" title="2.1持久化"></a>2.1持久化</h3><ul>
-<li>redis是一个内存数据库，当redis服务器重启，获取电脑重启，数据会丢失，我们可以将redis内存中的数据持久化保存到硬盘的文件中。</li>
-</ul>
-<h4 id="2-1-1持久化机制"><a href="#2-1-1持久化机制" class="headerlink" title="2.1.1持久化机制"></a>2.1.1持久化机制</h4><h5 id="RDB：默认方式"><a href="#RDB：默认方式" class="headerlink" title="RDB：默认方式"></a>RDB：默认方式</h5><ol>
-<li><p>编辑 redis.windows.conf 文件</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#   after 900 sec (15 min) if at least 1 key changed</span><br><span class="line">save 900 1</span><br><span class="line">#   after 300 sec (5 min) if at least 10 keys changed</span><br><span class="line">save 300 10</span><br><span class="line">#   after 60 sec if at least 10000 keys changed</span><br><span class="line">save 60 10000</span><br></pre></td></tr></table></figure>
-
-<p><strong>15 分钟之后，如果有一个 key 改变，持久化一次</strong></p>
-</li>
-<li><p>在redis文件夹下选择命令行启动<strong>服务端</strong></p>
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106171346559.png" alt="image-20201106171346559"></p>
-</li>
+<ol start="3">
 <li><p>点击启动客户端进行测试</p>
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106171750638.png" alt="image-20201106171750638"></p>
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106171750638.png" class>
 </li>
 <li><p>数据内容存在文件夹下的<strong>dump.rbd</strong>文件</p>
 </li>
@@ -376,8 +258,10 @@
 <li><p>使用：导入jar包到项目中，编写测试代码</p>
 </li>
 </ul>
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106172858393.png" alt="image-20201106172858393"></p>
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106173510568.png" alt="image-20201106173510568"></p>
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106172858393.png" class>
+
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106173510568.png" class>
+
 <ul>
 <li><p>方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jedis.setex(<span class="string">&quot;activecode&quot;</span>,<span class="number">20</span>,<span class="string">&quot;hehe&quot;</span>);<span class="comment">//将activecode：hehe键值对存入redis，并且20秒后自动删除该键值对</span></span><br></pre></td></tr></table></figure>
@@ -391,7 +275,7 @@
 <li><p>使用：</p>
 <ol>
 <li><p>测试</p>
-<p><img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/%5CRedis%E5%9F%BA%E7%A1%80%5Cimage-20201106174213475.png" alt="image-20201106174213475"></p>
+<img src="/2020/11/07/Redis%E5%9F%BA%E7%A1%80/image-20201106174213475.png" class>
 </li>
 <li><p>创建配置对象</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建一个配置对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">    jedisPoolConfig.setMaxTotal(<span class="number">50</span>);</span><br><span class="line">    jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    JedisPool jedisPool = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">&quot;localhost&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">    Jedis jedis = jedisPool.getResource();</span><br><span class="line">    jedis.set(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>);</span><br><span class="line">    jedis.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
